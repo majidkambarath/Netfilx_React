@@ -12,7 +12,7 @@ function RowPost(props) {
     axios.get(props.url).then((res)=>{
       SetMovie(res.data.results)
     })
-  },[])
+  },[props.url])
   const opts = {
     height: '390',
     width: '100%',
