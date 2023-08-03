@@ -8,8 +8,8 @@ function RowPost(props) {
   const [Movies,SetMovie] = useState([]);
   const [urlId ,SeturlId]= useState('')
   useEffect(()=>{
+   // eslint-disable-next-line
     axios.get(props.url).then((res)=>{
-   console.log(res.data.results);
       SetMovie(res.data.results)
     })
   },[])
